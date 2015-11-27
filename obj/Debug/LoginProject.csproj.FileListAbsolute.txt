@@ -20,3 +20,11 @@ C:\Users\Shruthi\documents\visual studio 2013\Projects\LoginProject\LoginProject
 C:\Users\Shruthi\documents\visual studio 2013\Projects\LoginProject\LoginProject\obj\Debug\LoginProject.dll
 C:\Users\Shruthi\documents\visual studio 2013\Projects\LoginProject\LoginProject\obj\Debug\LoginProject.pdb
 C:\Users\Shruthi\documents\visual studio 2013\Projects\LoginProject\LoginProject\obj\Debug\LoginProject.csprojResolveAssemblyReference.cache
+D:\MyProjects\LoginProject\bin\LoginProject.dll.config
+D:\MyProjects\LoginProject\bin\LoginProject.dll
+D:\MyProjects\LoginProject\bin\LoginProject.pdb
+D:\MyProjects\LoginProject\bin\EntityFramework.xml
+D:\MyProjects\LoginProject\bin\EntityFramework.SqlServer.xml
+D:\MyProjects\LoginProject\obj\Debug\LoginProject.csprojResolveAssemblyReference.cache
+D:\MyProjects\LoginProject\obj\Debug\LoginProject.dll
+D:\MyProjects\LoginProject\obj\Debug\LoginProject.pdb

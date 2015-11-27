@@ -95,7 +95,8 @@
                 </h3>
                 <br>
             <button type="button" class="btn btn-success btn-left" data-toggle="modal" data-target="#myModal">Login</button>
-                    @*@Html.ActionLink("Login", "Login", "Home", null, new { @class = "btn btn-success btn-left" })*@
+            @Html.ActionLink("Login", "Login", "Home", new { @class = "btn btn-success btn-left", data_toggle = "modal", data_target = "#myModal" })
+           
                      
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
@@ -478,12 +479,7 @@
         });
 
         
-   function openLoginPopup() {
-       $('#loginPopup').modal({
-           remote: '/account/login'
-       });
-       window.scroll(0, 0);
-   }
+      
    </script>
     
 </body>

@@ -15,18 +15,10 @@ namespace LoginProject.Controllers
         // GET: Login
         public ActionResult MainPage()
         {
-            if (Request.IsAuthenticated)
-            {
-
-                FormsAuthentication.SetAuthCookie("Cookie", true);
-                return RedirectToAction("Angular", "Admin", new { area = "" });
-                
-            }
-            else
-            {
+           
                 ModelState.AddModelError("No Data", "Please enter the UserName and Password");
                 return View("MainPage");
-            }
+            
         }
         //public ActionResult Index(string id)
         //{
