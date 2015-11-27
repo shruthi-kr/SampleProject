@@ -3,83 +3,34 @@
     Layout = null;
 }
 
- <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+<div class="container-fluid">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header" style="background-color:cadetblue">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title text-center black"><strong>Login Information</strong></h4>
-            </div>
-            <div class="modal-body">
-
-                <h2 class="text-center black">Welcome to .Net Learning</h2>
-                <br />
-                <div class="container">
-                    @using (Html.BeginForm("Validate", "Home", FormMethod.Post))
-                    {
-                        <strong>UserName</strong> @Html.TextBoxFor(m => m.Username) <br />
-                        @Html.ValidationMessageFor(x => x.Username)<br />
-                        <strong>Password</strong>  @Html.PasswordFor(m => m.Password)<br />
-                        @Html.ValidationMessageFor(x => x.Password)<br />
-                        <input id="Submit1" type="submit" value="Login" class="btn btn-success" />
-                    }
-                    <br />
-                    @Html.ValidationSummary()
-
-                </div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-            </div>
+    <!-- Modal content-->
+    <div class="login-content">
+        <div class="login-header" style="background-color:cadetblue">
+         
+            <h4 class="modal-title text-center black"><strong>Login Information</strong></h4>
         </div>
+        <div class="modal-body">
 
-    </div>
-</div>
-
-
-@*<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>.NET Learning</title>
-    <script src="~/Scripts/jquery-1.10.2.js"></script>
-    <script src="~/Scripts/jquery.validate.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
-</head>
-
-<body>
-   
-    <h2 class="message">Welcome to .Net Learning</h2>
-        <fieldset>
-            <legend>Login Form</legend>
+            <h2 class="text-center black">Welcome to .Net Learning</h2>
+            <br />
             <div class="container">
-                @using (Html.BeginForm("LoginScreen", "Home", FormMethod.Post))
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
                 {
-                    <strong>UserName</strong>@Html.TextBoxFor(m => m.Username) <br />
+                    <strong>UserName</strong> @Html.TextBoxFor(m => m.Username) <br />
                     @Html.ValidationMessageFor(x => x.Username)<br />
-                    <strong> Password</strong> @Html.PasswordFor(m => m.Password)<br />
+                    <strong>Password</strong>  @Html.PasswordFor(m => m.Password)<br />
                     @Html.ValidationMessageFor(x => x.Password)<br />
-                    <input id="Submit1" type="submit" value="Login" onclick="openLoginPopup();" />
+                    <input id="Submit1" type="submit" value="Login" class="btn btn-success" oncl />
                 }
                 <br />
                 @Html.ValidationSummary()
 
             </div>
-        </fieldset>
-    <script>
-    function openLoginPopup() {
-        $('#loginPopup').modal({
-            remote: '/account/login'
-        });
-        window.scroll(0, 0);
-    }
-    </script>
 
-</body>
-</html>*@
+        </div>
+       
+    </div>
+
+</div>

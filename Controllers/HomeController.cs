@@ -15,37 +15,13 @@ namespace LoginProject.Controllers
         // GET: Login
         public ActionResult MainPage()
         {
-           
-                ModelState.AddModelError("No Data", "Please enter the UserName and Password");
-                return View("MainPage");
+                return View();
             
         }
-        //public ActionResult Index(string id)
-        //{
-        //    if (Request.IsAuthenticated)
-        //    {
-        //        if (User.Identity.Name == "Admin")
-        //        {
-        //            return RedirectToAction("Index", "Admin");
-                    
-        //        }
-        //        else
-        //        {
-        //            return RedirectToAction("Index", "User");
-        //        }
-        //    }
-        //    ViewBag.Message = "Welcome to .Net Learning!";
-        //    return View();
-        //}
-        [AllowAnonymous]
-        public ActionResult Login()
-        {
-            return View();
-        }
-
+      
         [HttpPost]
         [AllowAnonymous]
-        public ActionResult Validate()
+        public ActionResult Login()
         {
             //Forms Authentication
             string userName = Request.Form["Username"].Trim();
@@ -62,8 +38,8 @@ namespace LoginProject.Controllers
             }
             else 
             {
-                ModelState.AddModelError("No Data", "Please enter the UserName and Password");
-                return View("MainPage");
+                ModelState.AddModelError("No Data", "Please enter the correct Username and Password");
+                return View();
             }
 
         }

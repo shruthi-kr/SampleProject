@@ -129,7 +129,6 @@
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Admin\Angular.cshtml" />
     <Content Include="Views\User\User.cshtml" />
@@ -184,6 +183,7 @@
     <Content Include="Views\Admin\EntityFramework.cshtml" />
     <Content Include="Views\Admin\Linq.cshtml" />
     <Content Include="Views\Admin\Ado.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
