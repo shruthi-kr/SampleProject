@@ -1,0 +1,63 @@
+﻿@model LoginProject.Models.User
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Welcome to .Net Learning</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="container">
+        <button type="button" onclick="openLoginPopup();" class="btn btn-success" style="float:right;">Login</button>
+        <h1 class="jumbotron">
+            Welcome to .Net Learning
+        </h1>
+        <div class="container">
+            <div class="col-lg-3 learnImage">
+                <img src="~/Content/assets/learning.png">
+            </div>
+            <div class="col-lg-9">
+                <p class="message">
+                    This is to help you learn all the necessary .net fundamentals i have been trying to learn and excel.
+                    For intital coding there is no login provided for user.
+                    For privacy and also serious learners login will be provided in later sections.
+
+                </p>
+            </div>
+
+        </div>
+        
+
+        <script>
+    function openLoginPopup() {
+        $('#loginPopup').modal({
+            remote: '/login/loginscreen'
+        });
+        window.scroll(0, 0);
+    }
+    </script>
+    </header>
+    <footer>
+        copyright .netLearning 2015
+    </footer>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

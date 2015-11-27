@@ -1,0 +1,79 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>@ViewBag.Title</title>
+
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Content/css/stylish-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Custom Fonts -->
+    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+    <!-- jQuery -->
+    <script src="~/Content/js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+
+    </head>
+    <body>
+        <div>
+            <table border="0" style="width:100%; font-family:Arial;">
+                <tr style="background-color:aliceblue">
+                    <td colspan="2" style="text-align:center"><h3>Hello @ViewBag.Title</h3></td>
+                </tr>
+                <tr>
+                    <td style="width:20% ;background-color:beige; font-size:20px;"><h1>Learn</h1>
+                    <br />
+                    <h3>Front End Technologies</h3>
+                    @Html.ActionLink("Learn HTML","html","Admin")<br />
+                    
+                        @Html.ActionLink("Learn CSS", "css", "Admin")<br />
+                        @Html.ActionLink("Learn Javascript", "javaScript", "Admin")<br />
+                        @Html.ActionLink("Learn Angular", "Angular", "Admin")<br />
+
+                    <h3>Languages</h3>
+                        @Html.ActionLink("Learn CSharp", "CSharp", "Admin")<br />
+
+                        @Html.ActionLink("Learn Asp.Net", "Asp", "Admin")<br />
+                        @Html.ActionLink("Learn MVC", "MVC", "Admin")<br />
+                        @Html.ActionLink("Learn WebApi", "webApi", "Admin")<br />
+                    <h3>Back End Technologies</h3>
+                        @Html.ActionLink("Learn SQL", "SQL", "Admin")<br />
+
+                        @Html.ActionLink("Learn ADO.Net", "Ado", "Admin")<br />
+                        @Html.ActionLink("Learn EntityFramework", "EntityFramework", "Admin")<br />
+                        @Html.ActionLink("Learn LINQ", "Linq", "Admin")<br />
+                    </td>
+
+                    <td style="width:70%"><h3>@RenderBody()</h3></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center; font-size:x-small">
+                        <h6> &copy; Copyright .Net Learning 2015</h6>
+                    </td>
+
+                </tr>
+            </table>
+
+        </div>
+    </body>
+</html>

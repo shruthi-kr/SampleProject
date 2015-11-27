@@ -1,0 +1,34 @@
+﻿
+@{
+  
+    ViewBag.Title = "StarRating";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!doctype html>
+<html lang="en" ng-app="RatingTutorial">
+<head>
+    <meta charset="utf-8">
+    <title>Welcome to BooKart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/css/star.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
+    <script src="~/Content/scripts/stardirective.js"></script>
+
+</head>
+
+
+<body ng-app="RatingTutorial" ng-controller="RatingCtrl">
+
+    <h3>Rating</h3>
+    <div ng-init="rating = star.rating + 2"></div>
+
+    <div class="star-rating" star-rating rating-value="rating"
+         data-max="5" on-rating-selected="rateFunction(rating)">
+
+    </div>
+    Rating Value is: {{rating}}
+</body>
+</html>

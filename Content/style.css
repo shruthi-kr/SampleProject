@@ -1,0 +1,43 @@
+﻿.body {
+    background-color:lightgray;
+}
+
+.container 
+{
+    color:gray;
+}
+.message 
+{
+    color:chocolate;
+    font-size:30px;
+  margin-left: 430px !important;
+}
+
+.learnImage {
+    max-height: 250px!important;
+    max-width: 500px!important;
+}
+.black{color:black;}
+
+.brown {
+    color:brown;
+}
+
+.btn-left {
+    float:left;
+    
+  margin-top: -148px;
+        margin-left: 101%;
+   
+}
+
+.carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 100%;
+            margin: auto;
+        }
+
+.model-title {
+    text-align:center!important;
+    background-color:blueviolet!important;
+}
