@@ -47,6 +47,7 @@ namespace LoginProject.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 UserDal dal = new UserDal();
                 dal.users.Add(m);
                 dal.SaveChanges();
