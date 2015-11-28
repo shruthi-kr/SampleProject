@@ -1,79 +1,161 @@
-﻿
+﻿@model LoginProject.Models.User
 <!DOCTYPE html>
-
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    
+    <!-- BOOTSTRAP STYLES-->
+    <link href="~/Content/assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="~/Content/assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="~/Content/assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @*<a class="navbar-brand" href="index.html">@HttpContext.Current.User.Identity.Name</a>*@
+                <a class="navbar-brand" href="index.html">@HttpContext.Current.User.Identity.Name</a>
+            </div>
 
-    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="~/Content/css/stylish-portfolio.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="~/Content/style.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!-- Custom Fonts -->
-    <link href="~/Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 20px;">
+                &nbsp;
+                @*<a href="#" class="btn btn-danger square-btn-adjust">Logout</a>*@
+                @Html.ActionLink("Logout", "MainPage", "Home", null, new { @class = "btn btn-danger square-btn-adjust" })
+            </div>
 
-    <![endif]-->
-    <!-- jQuery -->
-    <script src="~/Content/js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="~/Content/js/bootstrap.min.js"></script>
-    <!-- Custom Theme JavaScript -->
+               
+        </nav>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav active-" id="main-menu">
+                    <li class="text-center">
+                        <img src="~/Content/assets/img/find_user.png" class="user-image img-responsive" />
+                    </li>
 
-    </head>
-    <body>
-        <div>
-            <table border="0" style="width:100%; font-family:Arial;">
-                <tr style="background-color:aliceblue">
-                    <td colspan="2" style="text-align:center"><h3>Hello @ViewBag.Title</h3></td>
-                </tr>
-                <tr>
-                    <td style="width:20% ;background-color:beige; font-size:20px;"><h1>Learn</h1>
-                    <br />
-                    <h3>Front End Technologies</h3>
-                    @Html.ActionLink("Learn HTML","html","Admin")<br />
-                    
-                        @Html.ActionLink("Learn CSS", "css", "Admin")<br />
-                        @Html.ActionLink("Learn Javascript", "javaScript", "Admin")<br />
-                        @Html.ActionLink("Learn Angular", "Angular", "Admin")<br />
+                    <li>
+                        <a href='@(Url.Action("Index", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                       
+                       
+                    </li>
+                    <li>
+                        <a href='@(Url.Action("html", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> HTML</a>
+                      
+                    </li>
 
-                    <h3>Languages</h3>
-                        @Html.ActionLink("Learn CSharp", "CSharp", "Admin")<br />
+                    <li>
+                        <a href='@(Url.Action("css", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> CSS</a>
+                    </li>
 
-                        @Html.ActionLink("Learn Asp.Net", "Asp", "Admin")<br />
-                        @Html.ActionLink("Learn MVC", "MVC", "Admin")<br />
-                        @Html.ActionLink("Learn WebApi", "webApi", "Admin")<br />
-                    <h3>Back End Technologies</h3>
-                        @Html.ActionLink("Learn SQL", "SQL", "Admin")<br />
+                    <li>
+                        <a href='@(Url.Action("javaScript", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> Javascript</a>
+                    </li>
 
-                        @Html.ActionLink("Learn ADO.Net", "Ado", "Admin")<br />
-                        @Html.ActionLink("Learn EntityFramework", "EntityFramework", "Admin")<br />
-                        @Html.ActionLink("Learn LINQ", "Linq", "Admin")<br />
-                    </td>
+                    <li>
+                        <a href='@(Url.Action("Angular", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> Angular</a>
+                    </li>
+                    <li>
+                        <a href='@(Url.Action("CSharp", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> C#</a>
+                    </li>
+                    <li>
+                        <a href='@(Url.Action("Asp", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> ASP.net</a>
+                    </li>
+                    <li>
+                        <a href='@(Url.Action("MVC", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> MVC</a>
+                    </li>
+                    <li>
+                        <a href='@(Url.Action("webApi", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> Web Api</a>
+                    </li>
+                    <li>
+                        <a href='@(Url.Action("SQL", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> SQL</a>
+                    </li>
+                    <li>
+                        <a href='@(Url.Action("Ado", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> ADO.net</a>
+                    </li>
+                    <li>
+                        <a href='@(Url.Action("EntityFramework", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> Entity Framework</a>
+                    </li> 
+                    <li>
+                        <a href='@(Url.Action("Linq", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> LINQ</a>
+                    </li>
 
-                    <td style="width:70%"><h3>@RenderBody()</h3></td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align:center; font-size:x-small">
-                        <h6> &copy; Copyright .Net Learning 2015</h6>
-                    </td>
+@*Another approach to display data*@
+    @*<li>
+                        <a href="#"><i class="fa fa-sitemap fa-3x"></i> Front End<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#">HTML</a>
+                            </li>
+                            <li>
+                                <a href="#">CSS</a>
+                            </li>
+                            <li>
+                                <a href="#">Javascript</a>
+                            </li>
+                            <li>
+                                <a href="#">AngularJS</a>
+                            </li>
+                            @*<li>
+                                <a href="#">Second Level Link<span class="fa arrow"></span></a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Link</a>
+                                    </li>
 
-                </tr>
-            </table>
+                                </ul>
 
+                            </li>
+                        </ul>
+                    </li>*@
+
+                    <li>
+                        <a href='@(Url.Action("editor", "Admin"))'><i class="fa fa-dashboard fa-3x"></i>Editor Page</a>
+                        @*<a class="active-menu" href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>*@
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                @RenderBody()
+            </div>
+            <!-- /. PAGE INNER  -->
         </div>
-    </body>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="~/Content/assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="~/Content/assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="~/Content/assets/js/jquery.metisMenu.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <script src="~/Content/assets/js/custom.js"></script>
+
+   
+</body>
 </html>
+

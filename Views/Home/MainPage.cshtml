@@ -99,8 +99,8 @@
                         <div class="container">
                             @using (Html.BeginForm("Login", "Home", FormMethod.Post))
                             {
-                                <strong>UserName</strong> @Html.TextBoxFor(m => m.Username) <br />
-                                @Html.ValidationMessageFor(x => x.Username)<br />
+                                <strong>UserName</strong> @Html.TextBoxFor(m => m.UserName) <br />
+                                @Html.ValidationMessageFor(x => x.UserName)<br />
                                 <strong>Password</strong>  @Html.PasswordFor(m => m.Password)<br />
                                 @Html.ValidationMessageFor(x => x.Password)<br />
                                 <input id="Submit1" type="submit" value="Login" class="btn btn-success" oncl/>
@@ -164,8 +164,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="black">This is for all ages who want learn a technology from scratch!</h2>
-                    <p class="brown">
+                    <h2 class="black">This is for all ages who want to learn a .Net technology from scratch!</h2>
+                    <p class="black">
                         We believe that learning can become better through technology and we work hard to prove it.
                         Our main product, .Net Learning, is a new-type of learning tool for the developer who have a
                         basic knowledge of web technologies.

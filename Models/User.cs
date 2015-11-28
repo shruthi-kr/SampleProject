@@ -8,15 +8,11 @@ namespace LoginProject.Models
 {
     public class User
     {
-        [Key]
-       [Required(ErrorMessage="Please enter more than 5 characters")]
-        [Display(Name="User First Name")]
-       public string Username { get; set; }
-
-        
-        [Required(ErrorMessage = "Please enter more than 5 characters for password")]
+        public int ID { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public string UserName { get; set; }
         public string Password { get; set; }
-
-      
+        public virtual ICollection<Content> Contents { get; set; }
     }
 }

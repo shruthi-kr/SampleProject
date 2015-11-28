@@ -24,21 +24,21 @@ namespace LoginProject.Controllers
         public ActionResult Login()
         {
             //Forms Authentication
-            string userName = Request.Form["Username"].Trim();
+            string userName = Request.Form["UserName"].Trim();
             string Password = Request.Form["Password"].Trim();
             UserDal user = new UserDal();
 
             List<User> users = (from u in user.users
-                                where (u.Username == userName) && (u.Password == Password)
+                                where (u.UserName == userName) && (u.Password == Password)
                                 select u).ToList<User>();
             if (users.Count == 1)
             {
-                FormsAuthentication.SetAuthCookie("Cookie", true);
+                FormsAuthentication.SetAuthCookie(userName,true);
                 return RedirectToAction("Angular", "Admin", new { area = "" });
             }
             else 
             {
-                ModelState.AddModelError("No Data", "Please enter the correct Username and Password");
+                ModelState.AddModelError("No Data", "Please enter the correct UserName and Password");
                 return View();
             }
 

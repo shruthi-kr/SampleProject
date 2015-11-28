@@ -13,8 +13,7 @@ namespace LoginProject.Controllers
         #region frontEnd
         public ActionResult Index()
         {
-           
-            return View();
+             return View();
         }
         public ActionResult html()
         {
@@ -84,6 +83,9 @@ namespace LoginProject.Controllers
 
         #endregion
 
-
+        public ActionResult Editor()
+        {
+            return View();
+        }
     }
 }

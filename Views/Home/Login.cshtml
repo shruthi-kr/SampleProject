@@ -18,8 +18,8 @@
             <div class="container">
                 @using (Html.BeginForm("Login", "Home", FormMethod.Post))
                 {
-                    <strong>UserName</strong> @Html.TextBoxFor(m => m.Username) <br />
-                    @Html.ValidationMessageFor(x => x.Username)<br />
+                    <strong>UserName</strong> @Html.TextBoxFor(m => m.UserName) <br />
+                    @Html.ValidationMessageFor(x => x.UserName)<br />
                     <strong>Password</strong>  @Html.PasswordFor(m => m.Password)<br />
                     @Html.ValidationMessageFor(x => x.Password)<br />
                     <input id="Submit1" type="submit" value="Login" class="btn btn-success" oncl />

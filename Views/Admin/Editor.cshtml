@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>Feedback</h2>
+    <p>The form below contains a textarea for comments:</p>
+    <p>Please leave your comments with your email id.</p>
+    <form role="form" style="width:80%">
+        <div class="form-group">
+            <label for="usr">Name:</label>
+            <input type="text" class="form-control" id="usr">
+            <label for="usr">Email Id:</label>
+            <input type="text" class="form-control" id="email">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+            <input type="button" id="formSubmit" value="Submit" />
+        </div>
+    </form>
+</div>

@@ -88,6 +88,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="Content\assets\css\bootstrap.css" />
+    <Content Include="Content\assets\css\custom.css" />
+    <Content Include="Content\assets\css\font-awesome.css" />
+    <Content Include="Content\assets\font-awesome\fonts\fontawesome-webfontba72.svg" />
+    <Content Include="Content\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\assets\img\1.png" />
+    <Content Include="Content\assets\img\2.png" />
+    <Content Include="Content\assets\img\3.png" />
+    <Content Include="Content\assets\img\4.png" />
+    <Content Include="Content\assets\img\find_user.png" />
+    <Content Include="Content\assets\js\bootstrap.min.js" />
+    <Content Include="Content\assets\js\custom.js" />
+    <Content Include="Content\assets\js\dataTables\dataTables.bootstrap.css" />
+    <Content Include="Content\assets\js\dataTables\dataTables.bootstrap.js" />
+    <Content Include="Content\assets\js\dataTables\jquery.dataTables.js" />
+    <Content Include="Content\assets\js\jquery-1.10.2.js" />
+    <Content Include="Content\assets\js\jquery.metisMenu.js" />
+    <Content Include="Content\assets\js\morris\morris-0.4.3.min.css" />
+    <Content Include="Content\assets\js\morris\morris.js" />
+    <Content Include="Content\assets\js\morris\raphael-2.1.0.min.js" />
+    <Content Include="Content\assets\learning.png" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\star.css" />
@@ -108,9 +130,16 @@
     <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jquery.js" />
+    <Content Include="Content\scripts\customdirective.js" />
+    <Content Include="Content\scripts\controller.js" />
+    <Content Include="Content\scripts\model.js" />
+    <Content Include="Content\scripts\service.js" />
     <Content Include="Content\scripts\stardirective.js" />
     <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Home\MainPage.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -119,20 +148,21 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DAL\UserDal.cs" />
+    <Compile Include="DAL\UserDalInitializer.cs" />
+    <Compile Include="DAL\UserDalInitializer_2.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Content.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Admin\Angular.cshtml" />
     <Content Include="Views\User\User.cshtml" />
-    <Content Include="Views\Home\MainPage.cshtml" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="Content\font-awesome\fonts\fontawesome-webfont.woff" />
@@ -184,6 +214,21 @@
     <Content Include="Views\Admin\Linq.cshtml" />
     <Content Include="Views\Admin\Ado.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Content\assets\font-awesome\fonts\fontawesome-webfontba72.eot" />
+    <Content Include="Content\assets\font-awesome\fonts\fontawesome-webfontba72.ttf" />
+    <Content Include="Content\assets\font-awesome\fonts\fontawesome-webfontba72.woff" />
+    <Content Include="Content\assets\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\assets\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="config" />
+    <Content Include="description" />
+    <Content Include="README.md" />
+    <Content Include="LICENSE" />
+    <Content Include="HEAD" />
+    <Content Include="Views\Admin\Editor.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -193,7 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\assets\" />
+    <Folder Include="Http\Handlers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -210,7 +255,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>64801</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:64801/</IISUrl>
+          <IISUrl>http://localhost:64801/LoginProject</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

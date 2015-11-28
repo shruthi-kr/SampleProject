@@ -7,11 +7,21 @@
 <div class="container-fluid">
     <div>
         <h1>@ViewBag.Title Introduction</h1>
+        <div class="start-new-playlist form-inline clearfix">
+            
+            Start a new Topic: <input name="" type="text" placeholder="Enter a topic" class="form-filed enter-title-field" ng-model="myTopicModel.myTopicTitle" id="txt_createPlaylist" maxlength="120">
+
+            <div style="display:inline-block; margin-left:10px">
+                <a href="javascript:void(0)" id="createTopic" class="btn btn-success" ng-click="createTopic()">Create</a>
+
+            </div>
+            <div class="playlist-error-all-field" ng-bind="myTopicModel.createTopicError" ng-show="myTopicModel.createTopicError!=''"></div>
+        </div>
 
     </div>
     <hr />
     <div>
-        <h1>@ViewBag.Title Examples:</h1>
+        <p>@ViewBag.Title Examples:</p>
         <br />
         @Html.ActionLink("Star Rating", "StarRating", "Admin")
         <br />
