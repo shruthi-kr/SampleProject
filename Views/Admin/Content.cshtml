@@ -1,0 +1,29 @@
+﻿@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/app/article/controller.js"></script>
+<script src="~/Scripts/app/article/customdirective.js"></script>
+<script src="~/Scripts/app/article/model.js"></script>
+<script src="~/Scripts/app/article/service.js"></script>
+
+
+    <div class="row" ng-controller="ArticleCtrl" model="@ViewBag.Type">
+        <div class="col-md-4 col-sm-6 col-xs-6" ng-repeat="article in articles">
+
+            <article-details articleobj="article"></article-details>
+
+            @*<div class="panel panel-back noti-box">
+                <span class="icon-box bg-color-green set-icon">
+                    <i class="fa fa-bell-o"></i>
+                </span>
+                <div class="text-box">
+                    <p class="main-text">HTML</p>
+                    <p class="text-muted">6</p>
+
+                </div>
+            </div>*@
+        </div>
+
+</div>
+

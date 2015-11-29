@@ -46,3 +46,15 @@
     margin-top: -292px!important;
     font-size:20px;
 }
+
+.ellipse
+{
+    display: -webkit-box;
+    max-width: 400px;
+    height: 99px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}

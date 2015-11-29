@@ -1,4 +1,4 @@
-﻿@model LoginProject.Models.User
+﻿
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -14,9 +14,14 @@
     <link href="~/Content/assets/css/custom.css" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <!--Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
+    <script src="~/Scripts/app/app.js"></script>
 </head>
 <body>
-    <div id="wrapper">
+    <div id="wrapper" ng-app="myApp">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -32,6 +37,7 @@
             <div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 20px;">
                 &nbsp;
                 @*<a href="#" class="btn btn-danger square-btn-adjust">Logout</a>*@
+                @Html.ActionLink("Content", "Index", "Contents", null, new { @class = "btn btn-danger square-btn-adjust" })
                 @Html.ActionLink("Logout", "MainPage", "Home", null, new { @class = "btn btn-danger square-btn-adjust" })
             </div>
 
@@ -51,44 +57,44 @@
                        
                     </li>
                     <li>
-                        <a href='@(Url.Action("html", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> HTML</a>
+                        <a href='@(Url.Action("Content", "Admin", new { ContentType = "HTML" }))'><i class="fa fa-dashboard fa-3x"></i> HTML</a>
                       
                     </li>
 
                     <li>
-                        <a href='@(Url.Action("css", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> CSS</a>
+                        <a href='@(Url.Action("Content", "Admin", new { ContentType = "CSS" }))'><i class="fa fa-dashboard fa-3x"></i> CSS</a>
                     </li>
 
                     <li>
-                        <a href='@(Url.Action("javaScript", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> Javascript</a>
+                        <a href='@(Url.Action("Content", "Admin", new { ContentType = "Javascript" }))'><i class="fa fa-dashboard fa-3x"></i> Javascript</a>
                     </li>
 
                     <li>
-                        <a href='@(Url.Action("Angular", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> Angular</a>
+                        <a href='@(Url.Action("Content", "Admin", new { ContentType = "Angular" }))'><i class="fa fa-dashboard fa-3x"></i> Angular</a>
                     </li>
                     <li>
-                        <a href='@(Url.Action("CSharp", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> C#</a>
+                        <a href='@(Url.Action("Content", "Admin", new { ContentType = "C#" }))'><i class="fa fa-dashboard fa-3x"></i> C#</a>
                     </li>
                     <li>
-                        <a href='@(Url.Action("Asp", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> ASP.net</a>
+                        <a href='@(Url.Action("Content", "Admin", new { ContentType = "ASP.net" }))'><i class="fa fa-dashboard fa-3x"></i> ASP.net</a>
                     </li>
                     <li>
-                        <a href='@(Url.Action("MVC", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> MVC</a>
+                        <a href='@(Url.Action("Content", "Admin", new { ContentType = "MVC" }))'><i class="fa fa-dashboard fa-3x"></i> MVC</a>
                     </li>
                     <li>
-                        <a href='@(Url.Action("webApi", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> Web Api</a>
+                        <a href='@(Url.Action("Content", "Admin", new { ContentType = "Web Api" }))'><i class="fa fa-dashboard fa-3x"></i> Web Api</a>
                     </li>
                     <li>
-                        <a href='@(Url.Action("SQL", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> SQL</a>
+                        <a href='@(Url.Action("Content", "Admin", new { ContentType = "SQL" }))'><i class="fa fa-dashboard fa-3x"></i> SQL</a>
                     </li>
                     <li>
-                        <a href='@(Url.Action("Ado", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> ADO.net</a>
+                        <a href='@(Url.Action("Content", "Admin", new { ContentType = "ADO.net" }))'><i class="fa fa-dashboard fa-3x"></i> ADO.net</a>
                     </li>
                     <li>
-                        <a href='@(Url.Action("EntityFramework", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> Entity Framework</a>
+                        <a href='@(Url.Action("Content", "Admin", new { ContentType = "EF" }))'><i class="fa fa-dashboard fa-3x"></i> Entity Framework</a>
                     </li> 
                     <li>
-                        <a href='@(Url.Action("Linq", "Admin"))'><i class="fa fa-dashboard fa-3x"></i> LINQ</a>
+                        <a href='@(Url.Action("Linq", "Admin", new { ContentType = "LINQ" }))'><i class="fa fa-dashboard fa-3x"></i> LINQ</a>
                     </li>
 
 @*Another approach to display data*@
@@ -153,7 +159,7 @@
     <!-- METISMENU SCRIPTS -->
     <script src="~/Content/assets/js/jquery.metisMenu.js"></script>
     <!-- CUSTOM SCRIPTS -->
-    <script src="~/Content/assets/js/custom.js"></script>
+    @*<script src="~/Content/assets/js/custom.js"></script>*@
 
    
 </body>

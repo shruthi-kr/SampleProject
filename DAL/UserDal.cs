@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using LoginProject.Models;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LoginProject.DAL
 {
@@ -21,9 +22,15 @@ namespace LoginProject.DAL
             //modelBuilder.Entity<User>().ToTable("Users");
             //modelBuilder.Entity<Content>().ToTable("Contents");
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            
+                modelBuilder.Entity<Content>().HasKey(u => u.Id);
+ modelBuilder.Entity<Content>().Property(u => u.Id)
+   .HasDatabaseGeneratedOption(
+     DatabaseGeneratedOption.Identity);
         }
+
         public DbSet<User> users { get; set; }
-        public DbSet<Content> contents { get; set; }
+        public DbSet<LoginProject.Models.Content> Contents { get; set; }
 
         
     }

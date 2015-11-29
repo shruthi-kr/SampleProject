@@ -21,6 +21,8 @@ namespace LoginProject.DAL
             users.ForEach(c => context.users.Add(c));
             context.SaveChanges();
 
+          
+
         }
     }
 }

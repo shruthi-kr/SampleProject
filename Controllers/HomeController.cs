@@ -34,7 +34,7 @@ namespace LoginProject.Controllers
             if (users.Count == 1)
             {
                 FormsAuthentication.SetAuthCookie(userName,true);
-                return RedirectToAction("Angular", "Admin", new { area = "" });
+                return RedirectToAction("Index", "Admin", new { area = "" });
             }
             else 
             {
